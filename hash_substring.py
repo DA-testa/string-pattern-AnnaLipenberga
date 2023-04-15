@@ -3,7 +3,7 @@
 def read_input():
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
-   try:
+    try:
         input_type = input().strip()
         if input_type == 'I':
             pattern = input().strip()
