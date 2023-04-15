@@ -76,7 +76,5 @@ def get_occurrences(pattern, text):
 
 # this part launches the functions
 if __name__ == '__main__':
-    inputs = read_input()
-    if inputs is not None:
-        print_occurrences(get_occurrences(*read_input()))
+    print_occurrences(get_occurrences(*read_input()))
 
