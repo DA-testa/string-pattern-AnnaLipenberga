@@ -10,10 +10,16 @@ def read_input():
         
         input_type = input_string.strip()
         if input_type == 'I':
-            pattern = input_string.strip().split('\n')[1]
-            text = input_string.strip().split('\n')[2]
+            input_list = input_string.strip().split('\n')
+            if len(input_list) < 3:
+                 raise ValueError()
+            pattern = input_list[1]
+            text = input_list[2]
         elif input_type == 'F':
-            file_path = input_string.strip().split('\n')[1]
+            input_list = input_string.strip().split('\n')
+            if len(input_list) < 2:
+                raise ValueError()
+            file_path = input_list[1]
             with open(file_path, 'r') as f:
                 pattern = f.readline().strip()
                 text = f.readline().strip()
