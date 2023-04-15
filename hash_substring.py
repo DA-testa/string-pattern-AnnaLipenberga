@@ -13,7 +13,7 @@ def read_input():
             pattern = input().strip()
             text = input().strip()
         elif input_type == 'F':
-            file_path = "test/" + "06"
+            file_path = "tests/06"
             with open(file_path, 'r') as f:
                 pattern = f.readline().strip()
                 text = f.readline().strip()
