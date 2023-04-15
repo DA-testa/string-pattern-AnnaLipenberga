@@ -18,7 +18,7 @@ def read_input():
         
         return (pattern, text)
     
-    excep EOFError:
+    except EOFError:
         print("Error: Input source is empty")
         return None
     
