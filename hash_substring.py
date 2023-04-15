@@ -51,18 +51,19 @@ def get_occurrences(pattern, text):
         if p_hash == t_hash:
             match = True
             for i in range(p):
-                if pattern[i] != text[s+i]:
+                if text[s+i] != pattern[i]:
                     match = False
                     break
             if match:
                 occurrences.append(s)
         if s < t-p:
             t_hash = (d*(t_hash - ord(text[s])*h) + ord(text[s+p])) % q
-            if t_hash < 0:
-                t_hash += q
+            
+    return occurrences
+            
 
     # and return an iterable variable
-    return [0]
+   # return [0]
 
 
 # this part launches the functions
