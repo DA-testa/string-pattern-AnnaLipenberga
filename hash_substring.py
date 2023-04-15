@@ -6,20 +6,14 @@ def read_input():
     try:
         
         # replace input_string with the input that you want to provide
-        input_string = input()
+        #input_string = input()
         
-        input_type = input_string.strip()
+        input_type = input().strip()
         if input_type == 'I':
-            input_list = input_string.strip().split('\n')
-            if len(input_list) < 3:
-                 raise ValueError()
-            pattern = input_list[1]
-            text = input_list[2]
+            pattern = input().strip()
+            text = input().strip()
         elif input_type == 'F':
-            input_list = input_string.strip().split('\n')
-            if len(input_list) < 2:
-                raise ValueError()
-            file_path = input_list[1]
+            file_path = input().strip()
             with open(file_path, 'r') as f:
                 pattern = f.readline().strip()
                 text = f.readline().strip()
